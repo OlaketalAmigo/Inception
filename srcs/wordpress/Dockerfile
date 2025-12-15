@@ -5,9 +5,9 @@ RUN apt update && \
 	apt install curl -y && \
 	rm -rf /var/lib/apt/lists/*
 
-COPY ./script.sh /usr/local/bin/script.sh
-RUN chmod +x /usr/local/bin/script.sh
+COPY ./script_wordpress.sh /usr/local/bin/script_wordpress.sh
+RUN chmod +x /usr/local/bin/script_wordpress.sh
 
 EXPOSE 9000
 
-CMD ["/usr/local/bin/script.sh"]
+CMD ["/usr/local/bin/script_wordpress.sh"]
